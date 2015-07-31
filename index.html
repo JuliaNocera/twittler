@@ -9,6 +9,7 @@
   <body>
     <script>
 
+//Getting the time://
     var a_p = "";
     var d = new Date();
     var curr_hour = d.getHours();
@@ -33,21 +34,22 @@
          curr_min = "0" + curr_min;
       }
     var time = (curr_hour + ":" + curr_min + " " + a_p);
-
-
-        $(document).ready(function(){
+    //done with time//
+    
+      $(document).ready(function(){
         var $body = $('body');
         $body.html('');
 
         var index = streams.home.length - 1;
         while(index >= 0){
           var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
+          var $tweet = $('<div class="btn"></div>');
           $tweet.text('@' + tweet.user + ': ' + tweet.message + ' ' + time);
           $tweet.appendTo($body);
+           var username = streams.users[tweet.user]; 
           index -= 1;
         }
-        
+                
        $('<h1 class="head rainbow">Twittler</h1>').insertBefore($('body'));
 
         $("h1").css(".head");
@@ -64,13 +66,39 @@
 
        $("div").last().css({"padding-bottom" : "8px", "border-bottom-left-radius" : "15px", "border-bottom-right-radius" : "15px"});
 
+       for(var i = 0; i < username.length; i++){
+        if(username[i] === "shawndrost"){
+          $(username[i]).addClass('shawndrost');
+        }
+        else if(username[i] === "sharksforcheap"){
+          $(username[i]).addClass('sharksforcheap');
+        }
+        else if(username[i] === "mracus"){
+          $(username[i]).addClass('mracus');
+        }
+        else{
+          $(username[i]).addClass('douglascalhoun');
+        }
+       }
+      
 
+        $('.btn').on('click', function(){
+        
+         for(var i = 0; i < username.length; i++){
+          $(this).after(username[i].user + ": " + username[i].message +" " );
+         }
+         //good start but not quite right yet//
+        });
+
+      
        $("button").on('click', function(){
           window.location.reload();
        });
 
      });
-      
+
+
+
     </script>
   </body>
 </html>
