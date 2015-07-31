@@ -1,19 +1,49 @@
-.button{
+
+.button {
 	width :160px;
 	height: 40px;	
-	color: black;
+	color: #AD98B5;
 	background: purple;
 	border-radius: 40px;
+	border : none;
 	text-align: center;
-	margin-left: 25%;
+	margin: auto;
 	margin-top: 10%;
 	font-weight: bold;
 	font-size: 18px;
+	font-family: "American Typewriter";
+}
 
-};
+.head { 
+	padding-top: 50px;
+	padding-bottom: 90px;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-family: "American Typewriter";
+}
 
-.content{
-	margin-left: 30%;
-	border-style: double;
-	background-color: red;
-};
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+body {
+	background-image: url("backImg.jpg");
+	margin: auto;
+	max-width : 700px;
+	max-height : 220px; 
+	color : #00FA9A; 
+	text-align : center;
+}
+
+div {
+	background-color : #151515;
+	padding-left : 10px;
+	padding-right : 10px;
+	padding-top: 4px;	
+	opacity : 0.6;
+}

@@ -8,7 +8,33 @@
   </head>
   <body>
     <script>
-  
+
+    var a_p = "";
+    var d = new Date();
+    var curr_hour = d.getHours();
+      if (curr_hour < 12){
+        a_p = "AM";
+      }
+      else{
+        a_p = "PM";
+      }
+      if (curr_hour == 0){
+       curr_hour = 12;
+      }
+      if (curr_hour > 12){
+       curr_hour = curr_hour - 12;
+      }
+
+    var curr_min = d.getMinutes();
+
+    curr_min = curr_min + "";
+
+      if (curr_min.length == 1){
+         curr_min = "0" + curr_min;
+      }
+    var time = (curr_hour + ":" + curr_min + " " + a_p);
+
+
         $(document).ready(function(){
         var $body = $('body');
         $body.html('');
@@ -17,20 +43,30 @@
         while(index >= 0){
           var tweet = streams.home[index];
           var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
+          $tweet.text('@' + tweet.user + ': ' + tweet.message + ' ' + time);
           $tweet.appendTo($body);
           index -= 1;
         }
         
+       $('<h1 class="head rainbow">Twittler</h1>').insertBefore($('body'));
+
+        $("h1").css(".head");
 
        $('<button class="button">Update Stream</button>').appendTo($('body'));
 
-       $("body").css({"margin-left" : "30%", "margin-top" : "10%", "max-width" : "520px", "max-height" : "220px"});
+       $("body").css("body");
 
        $("button").css(".button");
 
+       $("div").css("div");
+
+       $("div").first().css({"padding-top" : "8px", "border-top-left-radius" : "15px", "border-top-right-radius" : "15px"});
+
+       $("div").last().css({"padding-bottom" : "8px", "border-bottom-left-radius" : "15px", "border-bottom-right-radius" : "15px"});
+
+
        $("button").on('click', function(){
-        window.location.reload();
+          window.location.reload();
        });
 
      });
