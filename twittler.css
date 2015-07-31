@@ -7,10 +7,10 @@
 	border : none;
 	text-align: center;
 	margin: auto;
-	margin-top: 10%;
+	margin-top: 8%;
 	font-weight: bold;
-	font-size: 18px;
-	font-family: "Comis Sans MS", Verdana, Arial;
+	font-size: 15px;
+	font-family: "Lucida Grande", "Comis Sans MS", Verdana;
 	background: -webkit-linear-gradient(left, purple , orange); /* For Safari 5.1 to 6.0 */
  	background: -o-linear-gradient(right, purple, orange); /* For Opera 11.1 to 12.0 */
  	background: -moz-linear-gradient(right, purple, orange); /* For Firefox 3.6 to 15 */
@@ -19,12 +19,15 @@
 }
 
 .head { 
-	padding-top: 50px;
-	padding-bottom: 90px;
+	padding-top: 15px;
+	padding-bottom: 8px;
 	text-align: center;
 	color: white;
+	font-size: 52px;
 	font-weight: bold;
-	font-family: "American Typewriter";
+	font-family: "Marker Felt", Impact;
+	border: double;
+	letter-spacing: 4px;
 }
 
 .rainbow {
@@ -38,10 +41,13 @@
 body {
 	background-image: url("backImg.jpg");
 	margin: auto;
-	max-width : 700px;
+	max-width : 730px;
 	max-height : 220px; 
 	color : #00FA9A; 
 	text-align : center;
+	font-family: "Andale Mono";
+	letter-spacing: -2px;
+	background-color: #3E193E;
 }
 
 div {
@@ -52,7 +58,5 @@ div {
 	opacity : 0.6;
 }
 
-.on {
-	background-color: #151515;
-}
+
 
