@@ -1,0 +1,19 @@
+.button{
+	width :160px;
+	height: 40px;	
+	color: black;
+	background: purple;
+	border-radius: 40px;
+	text-align: center;
+	margin-left: 25%;
+	margin-top: 10%;
+	font-weight: bold;
+	font-size: 18px;
+
+};
+
+.content{
+	margin-left: 30%;
+	border-style: double;
+	background-color: red;
+};
